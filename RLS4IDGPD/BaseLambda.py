@@ -25,8 +25,6 @@ class BaseLambda(object):
     def getValue(self):
         return self.__value
 
-    # def getLastLambda(self):
-    #     return self.__history[-1]
 
     def incrementValue(self):
         self.__value = self.__fixToDiscrete(self.__value + self.__increment, self.__value, self.__value + self.__increment, self.__increment)
