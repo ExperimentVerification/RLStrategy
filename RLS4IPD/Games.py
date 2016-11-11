@@ -17,18 +17,36 @@ class Games(object):
           ('D', 'C'): (5, 0),
           ('D', 'D'): (1, 1)}
     # optional types of games with different payoff values
-    # pd = {('C', 'C'): (8, 8),
-    #       ('C', 'D'): (0, 10),
-    #       ('D', 'C'): (10, 0),
-    #       ('D', 'D'): (3, 3)}
-    # pd = {('C', 'C'): (4, 3),
-    #       ('C', 'D'): (4, 2),
-    #       ('D', 'C'): (2, 3),
-    #       ('D', 'D'): (2, 2)}
-    # pd = {('C', 'C'): (random.randint(0,10), random.randint(0,10)),
-    #       ('C', 'D'): (random.randint(0,10), random.randint(0,10)),
-    #       ('D', 'C'): (random.randint(0,10), random.randint(0,10)),
-    #       ('D', 'D'): (random.randint(0,10), random.randint(0,10))}
+    
+    # Prisoner's Dilemma - 2
+    # pd = {('C', 'C'): (7, 7),
+    #       ('C', 'D'): (3, 8),
+    #       ('D', 'C'): (8, 3),
+    #       ('D', 'D'): (0, 0)}
+    
+    # The Battle of the Sexes - 1
+    # pd = {('C', 'C'): (10, 5),
+    #       ('C', 'D'): (0, 0),
+    #       ('D', 'C'): (0, 0),
+    #       ('D', 'D'): (5, 10)}
+    
+    # The Battle of the Sexes - 2
+    # pd = {('C', 'C'): (3, 2),
+    #       ('C', 'D'): (0, 0),
+    #       ('D', 'C'): (0, 0),
+    #       ('D', 'D'): (2, 3)}
+    
+    # The Game of Chicken - 1
+    # pd = {('C', 'C'): (3, 3),
+    #       ('C', 'D'): (1, 4),
+    #       ('D', 'C'): (4, 1),
+    #       ('D', 'D'): (0, 0)}
+    
+    # The Game of Chicken - 2
+    # pd = {('C', 'C'): (4, 4),
+    #       ('C', 'D'): (1, 7),
+    #       ('D', 'C'): (7, 1),
+    #       ('D', 'D'): (0, 0)}
 
     # for parameter investigation
     def __init__(self, lR = None, disF = None, gameLen = None, memLen = None):
