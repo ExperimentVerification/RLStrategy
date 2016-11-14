@@ -4,7 +4,7 @@
 from Strategy import *
 
 # the states in the Q table:
-# the parallel action pair or the parallel cooperation times
+# the parallel action pair or the frequency of parallel cooperation
 class ParallelRL(Strategy):
     __QTable = {}
     __Counter = 0
@@ -50,10 +50,10 @@ class ParallelRL(Strategy):
                     # parallel action pairs - PAP
                     # self.__LastState = tuple(self.historyLastN)
 
-                    # parallel cooperation times - PCT
+                    # frequency of parallel cooperation - FPC
                     self.__LastState = (str(self.__myLastN.count('C')), str(self.__oppLastN.count('C')))
 
-                    # PCT+OCP
+                    # FPC+OCP
                     # self.__LastState = (str(self.__myLastN.count('C')), str(self.__oppLastN.count('C')), int(self.__OppC/self.getRoundsPlayed() * 10))
                     if self.__LastState not in ParallelRL.__QTable:
                         ParallelRL.__QTable[self.__LastState] = [0, 0]
@@ -70,9 +70,9 @@ class ParallelRL(Strategy):
 
                     # self.__CurrentState = tuple(self.historyLastN) # PAP
 
-                    self.__CurrentState = (str(self.__myLastN.count('C')), str(self.__oppLastN.count('C'))) # PCT
+                    self.__CurrentState = (str(self.__myLastN.count('C')), str(self.__oppLastN.count('C'))) # FPC
 
-                    # self.__CurrentState = (str(self.__myLastN.count('C')), str(self.__oppLastN.count('C')), int(self.__OppC / self.getRoundsPlayed() * 10)) # PCT+OCP
+                    # self.__CurrentState = (str(self.__myLastN.count('C')), str(self.__oppLastN.count('C')), int(self.__OppC / self.getRoundsPlayed() * 10)) # FPC+OCP
 
                     FinalDecision = self.learningResult(OppLast, game)
             return FinalDecision
