@@ -7,7 +7,7 @@ from Strategy import *
 # history in the last n rounds - mine and oppo's
 # e.g. state - (my C, oppo's C)
 # with or without information of the whole history
-# sequential action pairs and sequential cooperation times
+# sequential action pairs and frequency of sequential cooperation
 class SequentialRL(Strategy):
     __QTable = {}
     __Counter = 0
