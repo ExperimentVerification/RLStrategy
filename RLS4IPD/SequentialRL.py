@@ -78,10 +78,10 @@ class SequentialRL(Strategy):
                     # sequential action pairs - SAP
                     # self.__CurrentState = tuple(self.__hisbeforeLastN)
 
-                    # sequential cooperation times - SCT
+                    # frequency of sequential cooperation - FSC
                     self.__CurrentState = (str(self.__mybeforeLastN.count('C')), str(self.__oppLastN.count('C')))
 
-                    # SCT+OCP
+                    # FSC+OCP
                     # self.__CurrentState = (str(self.__mybeforeLastN.count('C')), str(self.__oppLastN.count('C')), int(self.__OppC/self.getRoundsPlayed() * 10))
 
                     if self.__CurrentState not in SequentialRL.__QTable:
@@ -103,7 +103,7 @@ class SequentialRL(Strategy):
 
                     # self.__CurrentState = tuple(self.__hisbeforeLastN) # SAP
 
-                    self.__CurrentState = (str(self.__mybeforeLastN.count('C')), str(self.__oppLastN.count('C'))) # SCT
+                    self.__CurrentState = (str(self.__mybeforeLastN.count('C')), str(self.__oppLastN.count('C'))) # FSC
 
                     # self.__CurrentState = (str(self.__mybeforeLastN.count('C')), str(self.__oppLastN.count('C')), int(self.__OppC/self.getRoundsPlayed() * 10)) # SCT+OCP
                     FinalDecision = self.learningResult(OppLast, game)
