@@ -105,7 +105,7 @@ class SequentialRL(Strategy):
 
                     self.__CurrentState = (str(self.__mybeforeLastN.count('C')), str(self.__oppLastN.count('C'))) # FSC
 
-                    # self.__CurrentState = (str(self.__mybeforeLastN.count('C')), str(self.__oppLastN.count('C')), int(self.__OppC/self.getRoundsPlayed() * 10)) # SCT+OCP
+                    # self.__CurrentState = (str(self.__mybeforeLastN.count('C')), str(self.__oppLastN.count('C')), int(self.__OppC/self.getRoundsPlayed() * 10)) # FSC+OCP
                     FinalDecision = self.learningResult(OppLast, game)
 
             return FinalDecision
