@@ -15,6 +15,11 @@ RLS4IPD is for the iterated Prisoner's Dilemma part.
 
 RLS4IDGPD is for the iterated Double-Game Prisoner's Dilemma part.
 
+
+
+RewardFuncExample.txt compares the differences in trainig Q-tables with varying reward functions (i.e., whether both negative and non-negative rewards are needed).
+
+
 Run the [Tournament.py](https://github.com/ExperimentVerification/RLStrategy/blob/master/RLS4IDGPD/Tournament.py), which is the round-robin tournament for the DGPD, implemented according to Boyd's Material Versus Social Payoff Tournament. 
 
 Python Version used: 2.7.11
