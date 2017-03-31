@@ -5,6 +5,7 @@ Game Setting:
 -DisFactor0.9, 
 -TourSize22, 
 -epsilon= 0.05,
+-R = 3, S = 0, T = 5, P = 1,
 -RL agent: TSARSA-FSC
 
 In the same game setting with different reward functions, the Q-tables after training for 100 round-robin tournaments are shown below.
